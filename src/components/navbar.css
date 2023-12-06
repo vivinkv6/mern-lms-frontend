@@ -1,0 +1,32 @@
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+/* Nav Section */
+
+nav {
+  position: relative;
+  top: -7.5px;
+  left: -7.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(55, 141, 222);
+}
+
+nav > .links {
+  list-style-type: none;
+  display: flex;
+}
+
+.links > li {
+  margin: 30px;
+  font-size: 23px;
+}
+
+.logo > img {
+  height: 100px;
+  width: 100px;
+}
