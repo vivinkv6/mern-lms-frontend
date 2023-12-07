@@ -10,6 +10,7 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
+import {motion} from 'framer-motion'
 
 const pages: { id: number; name: string; url: string }[] = [
   {
@@ -49,27 +50,122 @@ function Navbar() {
 
   return (
     <>
-      <nav className="nav-container nav1">
+      <motion.nav className="nav-container nav1" 
+      initial={{
+        y:-500
+      }}
+      animate={{
+        y:0
+      }}
+      transition={{
+        type:'tween',
+        stiffness:200,
+        duration:1
+
+      }}
+      >
         <div className="logo">
           <img src={logo} alt="" />
           <span className="title">Public Library</span>
         </div>
-        <div className="links">
-          <li>
-            <a href="">Home</a>
-          </li>
-          <li>
-            <a href="">About</a>
-          </li>
-          <li>
+        <div className="links"
+        >
+          <motion.li
+           initial={{
+            scale:1.5,
+             opacity:0
+           }}
+           animate={{
+             scale:1,
+             opacity:1
+           }}
+           transition={{
+             type:'spring',
+             stiffness:200,
+             delay:1
+           }}
+           whileHover={{
+             scale:1.2,
+             
+           }}
+          >
+            <a href="#home">Home</a>
+          </motion.li>
+          <motion.li
+           initial={{
+            scale:1.5,
+             opacity:0
+           }}
+           animate={{
+             scale:1,
+             opacity:1,
+           }}
+           transition={{
+             type:'spring',
+             stiffness:200,
+             delay:1.2
+           }}
+          >
+            <a href="#about">About</a>
+          </motion.li>
+          <motion.li
+           initial={{
+            scale:1.5,
+             opacity:0
+           }}
+           animate={{
+             scale:1,
+             opacity:1
+           }}
+           transition={{
+             type:'spring',
+             stiffness:200,
+             delay:1.4
+           }}
+           whileHover={{
+             scale:1.2,
+             
+           }}
+          >
             <a href="">Book</a>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+           initial={{
+            scale:1.5,
+             opacity:0
+           }}
+           animate={{
+             scale:1,
+             opacity:1
+           }}
+           transition={{
+             type:'spring',
+             stiffness:200,
+             delay:1.6
+           }}
+           whileHover={{
+             scale:1.2,
+             
+           }}
+          >
             <a href="">Category</a>
-          </li>
+          </motion.li>
         </div>
-      </nav>
-      <nav className="nav2">
+      </motion.nav>
+      <motion.nav className="nav2"
+      initial={{
+        y:-500
+      }}
+      animate={{
+        y:0
+      }}
+      transition={{
+        type:'tween',
+        stiffness:200,
+        duration:1
+
+      }}
+      >
         <AppBar position="static">
           <Container maxWidth="xl">
             <Toolbar disableGutters>
@@ -116,7 +212,7 @@ function Navbar() {
             </Toolbar>
           </Container>
         </AppBar>
-      </nav>
+      </motion.nav>
     </>
   );
 }

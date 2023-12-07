@@ -1,20 +1,80 @@
 import "./banner.css";
+import { motion } from "framer-motion";
+
 function Banner() {
   return (
     <>
-      <div className="banner"></div>
+      <motion.div
+        className="banner"
+        id="home"
+        initial={{
+          opacity: 0,
+        }}
+        animate={{
+          opacity: 1,
+        }}
+        transition={{
+          delay: 1.5,
+        }}
+      ></motion.div>
       <div className="banner-content">
-        <h2>
+        <motion.h2
+          initial={{
+            opacity: 0,
+            visibility: "hidden",
+            y: 100,
+          }}
+          animate={{
+            opacity: 1,
+            visibility: "visible",
+            y: 0,
+          }}
+          transition={{
+            delay: 2.5,
+            duration: 2,
+          }}
+        >
           WELCOME <br /> TO <br /> PUBLIC LIBRARY
-        </h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
-          consectetur minus, aliquid error pariatur sunt, sint cupiditate,
-          placeat perferendis qui corporis veritatis voluptate nemo praesentium
-          eaque ex hic nam eos.
-        </p>
-        <button>GET STARTED</button>
+        </motion.h2>
+        <motion.p
+          initial={{
+            opacity: 0,
+            visibility: "hidden",
+            y: 100,
+          }}
+          animate={{
+            opacity: 1,
+            visibility: "visible",
+            y: 0,
+          }}
+          transition={{
+            delay: 3,
+            duration: 2.5,
+          }}
+        >
+         Unleash your curiosity. Discover your next adventure in reading.
+        </motion.p>
+        <motion.button
+          initial={{
+            opacity: 0,
+            visibility: "hidden",
+            y: 100,
+          }}
+          animate={{
+            opacity: 1,
+            visibility: "visible",
+            y: 0,
+            scale: 1.2,
+          }}
+          transition={{
+            delay: 3.5,
+            duration: 3,
+          }}
+        >
+          GET STARTED
+        </motion.button>
       </div>
+
     </>
   );
 }
