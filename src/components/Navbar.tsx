@@ -1,5 +1,5 @@
 import "./navbar.css";
-import logo from "../../public/book.png";
+import logo from "/book.png";
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";

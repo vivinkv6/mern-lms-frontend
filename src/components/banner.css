@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+
+.banner {
+  background-image: url("/banner.jpg");
+  background-size: cover;
+  filter: brightness(0.5);
+  height: 90dvh;
+  position: relative;
+  top: 0px;
+}
+
+.banner-content {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  color: azure;
+  text-align: center;
+}
+
+.banner-content > h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 50px;
+  line-height: 5rem;
+}
+
+.banner-content > button {
+  background-color: azure;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+/* Responsive layout */
+
+@media screen and (max-width: 500px) {
+  .banner-content {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    color: azure;
+    text-align: center;
+    margin: 20px;
+  }
+  .banner-content > h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    line-height: 3rem;
+  }
+
+  .banner-content > button {
+    background-color: azure;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .banner-content {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: azure;
+    text-align: center;
+    margin: 20px;
+  }
+  .banner-content > h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 25px;
+    line-height: 2rem;
+  }
+
+  .banner-content > button {
+    background-color: azure;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-weight: 700;
+    font-size: 10px;
+  }
+}
