@@ -3,11 +3,11 @@
 .about-container {
   display: flex;
   flex-direction: row;
-
   justify-content: center;
   align-items: center;
   margin: 20px;
   gap: 30px;
+  margin-top: 200px;
 }
 
 .about-content {

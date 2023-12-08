@@ -127,7 +127,7 @@ function Navbar() {
              
            }}
           >
-            <a href="">Book</a>
+            <a href="#book">Book</a>
           </motion.li>
           <motion.li
            initial={{
