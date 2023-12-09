@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+.category-container {
+  margin-top: 250px;
+  display: flex;
+  flex-direction: column;
+}
+
+.category-header > h2 {
+  text-align: center;
+  font-size: 60px;
+  font-family: "Teko", sans-serif;
+}
+
+.category-header > p {
+  text-align: center;
+  font-size: 30px;
+  margin: 10px;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.category-item {
+  background-color: rgb(224, 224, 224);
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 0px;
+  box-shadow: 0px 0px 10px rgb(40, 38, 38);
+  position: relative;
+}
+
+.category-item > img {
+  height: 400px;
+  min-width: 300px;
+  object-fit: fill;
+  border-radius: 5px;
+  filter: brightness(0.4);
+  /* border-top-left-radius: 10px; */
+}
+
+.category-item > img:hover {
+  scale: 1.1;
+  transition: 1s scale ease-in-out;
+}
+
+.category-item > h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 27px;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  line-height: 30px;
+  position: absolute;
+  left: 30%;
+  top: 40%;
+}
+
+.category-item > h5 {
+  font-family: "Open Sans", sans-serif;
+  /* font-style: italic; */
+  font-size: 20px;
+  color: rgb(83, 83, 83);
+}
