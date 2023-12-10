@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./banner.css";
 import { motion } from "framer-motion";
 
@@ -54,6 +55,7 @@ function Banner() {
         >
          Unleash your curiosity. Discover your next adventure in reading.
         </motion.p>
+       
         <motion.button
           initial={{
             opacity: 0,
@@ -71,8 +73,9 @@ function Banner() {
             duration: 3,
           }}
         >
-          GET STARTED
+       <Link to='/users' style={{color:'black'}}>  GET STARTED </Link>
         </motion.button>
+       
       </div>
 
     </>
