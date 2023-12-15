@@ -1,0 +1,136 @@
+.container {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > span {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.signup-container {
+  background-color: rgba(255, 255, 255, 0.721);
+
+  border: 1px solid black;
+  padding: 25px;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.signup-img > img {
+  height: 100px;
+  width: 100px;
+}
+
+.signup-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.signup-email {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.signup-password {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.signup-confirm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 5px;
+}
+
+.signup-email > input {
+  height: 30px;
+  width: 250px;
+  border-radius: 5px;
+  border: 0.2px solid rgb(214, 214, 214);
+  background-color: rgb(237, 237, 237);
+  font-size: 18px;
+}
+
+.signup-email > label {
+  font-size: 20px;
+  font-size: 18px;
+}
+
+.signup-password > input {
+  height: 30px;
+  width: 250px;
+  border-radius: 5px;
+  border: 0.2px solid rgb(214, 214, 214);
+  background-color: rgb(237, 237, 237);
+}
+
+.signup-password > label {
+  font-size: 20px;
+}
+
+.signup-confirm > input {
+  height: 30px;
+  width: 250px;
+  border-radius: 5px;
+  border: 0.2px solid rgb(214, 214, 214);
+  background-color: rgb(237, 237, 237);
+}
+
+.signup-confirm > label {
+  font-size: 20px;
+}
+
+.signup-button > button {
+  height: auto;
+  width: 100px;
+  border-radius: 7px;
+  border: none;
+  background-color: rgb(0, 55, 255);
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .container > span {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .signup-container {
+    width: 18rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .container > span {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+
+  .signup-container {
+    width: 15rem;
+  }
+}
