@@ -91,36 +91,7 @@ li:hover {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 40px;
-    background-color: rgb(92, 169, 246);
-    padding: 15px;
-    height: 100dvh;
-    position: fixed;
-  }
-
-  .sidenav2 > ul {
-    margin-top: 80px;
-    height: 800px;
-    list-style-type: none;
-  }
-  .icon {
-    width: 50px;
-    height: 50px;
-    margin: 10px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .sidenav {
-    display: none;
-  }
-
-  .sidenav2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 40px;
+    width: 45px;
     background-color: rgb(92, 169, 246);
     padding: 15px;
     height: 100dvh;
@@ -136,6 +107,41 @@ li:hover {
     width: 40px;
     height: 40px;
     margin: 10px;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .sidenav {
+    display: none;
+  }
+
+  .sidenav2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 45px;
+    background-color: rgb(92, 169, 246);
+    padding: 15px;
+    height: 100dvh;
+    position: fixed;
+  }
+
+  .sidenav2 > ul {
+    margin-top: 80px;
+    height: 800px;
+    list-style-type: none;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
   }
 }
 
