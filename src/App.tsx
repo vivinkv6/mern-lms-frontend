@@ -15,6 +15,7 @@ import LibrarianLogin from "./components/librarian/LibrarianLogin";
 //reader components
 import ReaderLogin from "./components/user/ReaderLogin";
 import ReaderSignup from './components/user/Signup';
+import AdminDashboard from "./components/admin/Dashboard/AdminDashboard";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="admin">
             <Route path="login" element={<AdminLogin />} />
             <Route path="signup" element={<AdminSignup/>} />
+            <Route path="dashboard" element={<AdminDashboard/>} />
           </Route>
 
           {/* Reader Routes */}
