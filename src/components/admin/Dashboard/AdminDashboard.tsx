@@ -8,15 +8,26 @@ import icon4 from "/icon4.png";
 import icon5 from "/icon5.png";
 
 import { motion } from "framer-motion";
+import { Grid } from "@mui/material";
+
+
+import DeleteIcon from "@mui/icons-material/Delete";
+
 
 function AdminDashboard() {
   return (
-    <div className="admin-container">
-      <SideNav />
-      <div>Admin Dashboard</div>
-    </div>
+    <Grid container spacing={2}>
+      <Grid item xl={3} md={3} xs={4}>
+        <SideNav />
+      </Grid>
+      <Grid item xl={9} md={9} xs={8}>
+        <Users />
+      </Grid>
+    </Grid>
   );
 }
+
+// Sidenav Component
 
 function SideNav() {
   const parentVariant = {
@@ -59,7 +70,7 @@ function SideNav() {
               duration: 1,
             }}
           >
-            <img src={icon1} className="icon" alt="" />
+            <img src={icon2} className="icon" alt="" />
             user
           </motion.li>
           <motion.li
@@ -76,7 +87,7 @@ function SideNav() {
               duration: 1,
             }}
           >
-            <img src={icon2} className="icon" alt="" />
+            <img src={icon1} className="icon" alt="" />
             Librarian
           </motion.li>
           <motion.li
@@ -238,5 +249,131 @@ function SideNav() {
     </>
   );
 }
+
+// users component
+
+function Users() {
+  return (
+    <>
+      <input type="text" className="search" name="" id="" />
+      <div className="card-container">
+        <div className="card-item">
+          <div className="card-header">
+            <img
+              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              className="profile"
+              alt=""
+            />
+            <DeleteIcon className="btn" fontSize="medium" />
+          </div>
+          <div className="card-body">
+            <tr>
+              <th>Id: </th>
+              <td>001</td>
+            </tr>
+            <tr>
+              <th>Name: </th>
+              <td>Jack</td>
+            </tr>
+            <tr>
+              <th>Email: </th>
+              <td>jack@20</td>
+            </tr>
+          </div>
+        </div>
+        <div className="card-item">
+          <div className="card-header">
+            <img
+              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              className="profile"
+              alt=""
+            />
+            <DeleteIcon className="btn" fontSize="medium" />
+          </div>
+          <div className="card-body">
+            {/* <h2>Id:001</h2>
+          <h2>Name: Jack</h2>
+          <h3>Email: jack@200</h3> */}
+            <tr>
+              <th>Id: </th>
+              <td>001</td>
+            </tr>
+            <tr>
+              <th>Name: </th>
+              <td>Jack</td>
+            </tr>
+            <tr>
+              <th>Email: </th>
+              <td>jack@20</td>
+            </tr>
+          </div>
+        </div>
+        <div className="card-item">
+          <div className="card-header">
+            <img
+              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              className="profile"
+              alt=""
+            />
+            <DeleteIcon className="btn" fontSize="medium" />
+          </div>
+          <div className="card-body">
+            <tr>
+              <th>Id: </th>
+              <td>001</td>
+            </tr>
+            <tr>
+              <th>Name: </th>
+              <td>Jack</td>
+            </tr>
+            <tr>
+              <th>Email: </th>
+              <td>jack@20</td>
+            </tr>
+          </div>
+        </div>
+
+        <div className="card-item">
+          <div className="card-header">
+            <img
+              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              className="profile"
+              alt=""
+            />
+            <DeleteIcon className="btn" fontSize="medium" />
+          </div>
+          <div className="card-body">
+            <tr>
+              <th>Id: </th>
+              <td>001</td>
+            </tr>
+            <tr>
+              <th>Name: </th>
+              <td>Jack</td>
+            </tr>
+            <tr>
+              <th>Email: </th>
+              <td>jack@20</td>
+            </tr>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+
+
+
+
+// function Librarian() {
+//   return <>Librarian List</>;
+// }
+// function Books() {
+//   return <>Books List</>;
+// }
+// function Category() {
+//   return <>Category List</>;
+// }
 
 export default AdminDashboard;
