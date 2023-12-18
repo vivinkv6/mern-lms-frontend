@@ -169,6 +169,23 @@ li:hover {
 
 /* Admin Dashboard part */
 
+table{
+  margin-top: 5rem;
+  width: 800px;
+}
+
+table,tr{
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+td,th{
+  font-size: 20px;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+
 
 
 
@@ -189,7 +206,7 @@ li:hover {
   margin-top: 20px;
   margin-right: 10px;
   height: auto;
-  display: flex;
+  display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -239,6 +256,12 @@ tr {
 }
 
 @media screen and (max-width: 900px) {
+
+ 
+  table{
+    width: 500px;
+  }
+  
   .search {
     width: 400px;
     margin-left: 5px;
@@ -246,6 +269,12 @@ tr {
 }
 
 @media screen and (max-width: 500px) {
+  table{
+   display: none;
+  }
+  .card-container{
+    display: flex;
+  }
   .search {
     width: 220px;
     margin-left: 5px;

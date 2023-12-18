@@ -8,11 +8,9 @@ import icon4 from "/icon4.png";
 import icon5 from "/icon5.png";
 
 import { motion } from "framer-motion";
-import { Grid } from "@mui/material";
-
+import { Button, Grid } from "@mui/material";
 
 import DeleteIcon from "@mui/icons-material/Delete";
-
 
 function AdminDashboard() {
   return (
@@ -256,6 +254,8 @@ function Users() {
   return (
     <>
       <input type="text" className="search" name="" id="" />
+
+      {/* Mobile Design */}
       <div className="card-container">
         <div className="card-item">
           <div className="card-header">
@@ -291,9 +291,7 @@ function Users() {
             <DeleteIcon className="btn" fontSize="medium" />
           </div>
           <div className="card-body">
-            {/* <h2>Id:001</h2>
-          <h2>Name: Jack</h2>
-          <h3>Email: jack@200</h3> */}
+          
             <tr>
               <th>Id: </th>
               <td>001</td>
@@ -358,13 +356,59 @@ function Users() {
           </div>
         </div>
       </div>
+
+      {/* Desktop, laptop , tablet design */}
+      <table border={1} cellPadding={3}>
+        <tr>
+          <th>ID</th>
+          <th>Profile</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Remove</th>
+        </tr>
+        <tr>
+          <td>001</td>
+          <td>
+            <img height={80} width={80} className="profile" src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+          </td>
+          <td>Jack</td>
+          <td>jack@100</td>
+          <td align="center">
+            <Button color="error" variant="contained" startIcon={<DeleteIcon />}>
+              Delete
+            </Button>
+          </td>
+        </tr>
+        <tr>
+          <td>001</td>
+          <td>
+            <img height={80} width={80} className="profile" src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+          </td>
+          <td>Jack</td>
+          <td>jack@100</td>
+          <td align="center">
+            <Button color="error" variant="contained" startIcon={<DeleteIcon />}>
+              Delete
+            </Button>
+          </td>
+        </tr>
+        <tr>
+          <td>001</td>
+          <td>
+            <img height={80} width={80} className="profile" src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+          </td>
+          <td>Jack</td>
+          <td>jack@100</td>
+          <td align="center">
+            <Button color="error" variant="contained" startIcon={<DeleteIcon />}>
+              Delete
+            </Button>
+          </td>
+        </tr>
+      </table>
     </>
   );
 }
-
-
-
-
 
 // function Librarian() {
 //   return <>Librarian List</>;
