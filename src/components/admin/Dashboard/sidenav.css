@@ -169,25 +169,25 @@ li:hover {
 
 /* Admin Dashboard part */
 
-table{
+table {
   margin-top: 5rem;
   width: 800px;
 }
 
-table,tr{
+table,
+tr,
+th,
+td {
   border-collapse: collapse;
   border: 2px solid black;
 }
 
-td,th{
+td,
+th {
   font-size: 20px;
   text-align: center;
   box-sizing: content-box;
 }
-
-
-
-
 
 /* Users Section */
 
@@ -256,12 +256,10 @@ tr {
 }
 
 @media screen and (max-width: 900px) {
-
- 
-  table{
+  table {
     width: 500px;
   }
-  
+
   .search {
     width: 400px;
     margin-left: 5px;
@@ -269,10 +267,10 @@ tr {
 }
 
 @media screen and (max-width: 500px) {
-  table{
-   display: none;
+  table {
+    display: none;
   }
-  .card-container{
+  .card-container {
     display: flex;
   }
   .search {
