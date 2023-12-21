@@ -16,6 +16,7 @@ import LibrarianLogin from "./components/librarian/LibrarianLogin";
 import ReaderLogin from "./components/user/ReaderLogin";
 import ReaderSignup from './components/user/Signup';
 import AdminDashboard from "./components/admin/Dashboard/AdminDashboard";
+import LibrarianDashboard from "./components/librarian/Dashboard/LibrarianDashboard";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
           {/* Librarian Routes */}
           <Route path="librarian">
             <Route path="login" element={<LibrarianLogin />} />
+            <Route path="dashboard" element={<LibrarianDashboard/>}/>
             {/* <Route path="signup" element={<LibrarianSignup/>} /> */}
           </Route>
         </Route>

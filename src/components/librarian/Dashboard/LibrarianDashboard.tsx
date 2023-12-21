@@ -1,24 +1,24 @@
-import "./sidenav.css";
+import { Grid } from "@mui/material";
+import { motion } from "framer-motion";
+import React, { useState } from "react";
 
 import DashboardIcon from "@rsuite/icons/Dashboard";
-import icon1 from "/icon1.png";
-import icon2 from "/icon2.png";
+import DeleteIcon from "@mui/icons-material/Delete";
+
+import { Button } from "@mui/material";
+import { Edit } from "@mui/icons-material";
+
+import icon1 from "/borrow.png";
+import icon2 from "/readerIcon.png";
 import icon3 from "/icon3.png";
 import icon4 from "/icon4.png";
 import icon5 from "/icon5.png";
-
-import { motion } from "framer-motion";
-import { Button, Grid } from "@mui/material";
-
-import DeleteIcon from "@mui/icons-material/Delete";
-import { Edit } from "@mui/icons-material";
-import { useState } from "react";
 
 type sideNavProp = {
   setNav: React.Dispatch<React.SetStateAction<number>>;
 };
 
-function AdminDashboard() {
+function LibrarianDashboard() {
   const [nav, setNav] = useState<number>(1);
   let ResultComponent = <Users />;
 
@@ -27,7 +27,7 @@ function AdminDashboard() {
       ResultComponent = <Users />;
       break;
     case 2:
-      ResultComponent = <Librarian />;
+      ResultComponent = <Users />;
       break;
     case 3:
       ResultComponent = <Books />;
@@ -50,8 +50,6 @@ function AdminDashboard() {
     </Grid>
   );
 }
-
-// Sidenav Component
 
 function SideNav(prop: sideNavProp) {
   const parentVariant = {
@@ -282,8 +280,6 @@ function SideNav(prop: sideNavProp) {
   );
 }
 
-// users component
-
 function Users() {
   return (
     <>
@@ -310,8 +306,24 @@ function Users() {
               <td>Jack</td>
             </tr>
             <tr>
-              <th>Email: </th>
-              <td>jack@20</td>
+              <th>Book </th>
+              <td>Harry Potter</td>
+            </tr>
+            <tr>
+              <th>Mob</th>
+              <td>1717271717</td>
+            </tr>
+            <tr>
+              <th>Place</th>
+              <td>Thrissur</td>
+            </tr>
+            <tr>
+              <th>Start Date</th>
+              <td>12/04/2023</td>
+            </tr>
+            <tr>
+              <th>End Date</th>
+              <td>21/04/2023</td>
             </tr>
           </div>
         </div>
@@ -407,80 +419,104 @@ function Users() {
         }}
         border={1}
         cellPadding={3}
+        style={{ width: "100%" }}
       >
         <tr>
           <th>ID</th>
-          <th>Profile</th>
           <th>Name</th>
-          <th>Email</th>
-          <th>Remove</th>
+          <th>Book</th>
+          <th>Author</th>
+          <th>Edition</th>
+          <th>Mobile</th>
+          <th>Place</th>
+          <th>Start Date</th>
+          <th>End Date</th>
+          <th>Edit/Return</th>
         </tr>
         <tr>
           <td>001</td>
-          <td>
-            <img
-              height={80}
-              width={80}
-              className="profile"
-              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-          </td>
           <td>Jack</td>
-          <td>jack@100</td>
+          <td>Harry Potter</td>
+          <td>JK Rowling</td>
+          <td>5</td>
+          <td>3837443344</td>
+          <td>Thrissur</td>
+          <td>12/04/2023</td>
+          <td>21/04/2023</td>
           <td align="center">
             <Button
-              color="error"
+              color="info"
               variant="contained"
               startIcon={<DeleteIcon />}
+              style={{ margin: 5 }}
             >
-              Delete
+              Return
+            </Button>
+            <Button
+              color="primary"
+              variant="contained"
+              startIcon={<DeleteIcon />}
+              style={{ margin: 5 }}
+            >
+              update
             </Button>
           </td>
         </tr>
         <tr>
           <td>001</td>
-          <td>
-            <img
-              height={80}
-              width={80}
-              className="profile"
-              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-          </td>
           <td>Jack</td>
-          <td>jack@100</td>
+          <td>Harry Potter</td>
+          <td>JK Rowling</td>
+          <td>5</td>
+          <td>3837443344</td>
+          <td>Thrissur</td>
+          <td>12/04/2023</td>
+          <td>21/04/2023</td>
           <td align="center">
             <Button
-              color="error"
+              color="info"
               variant="contained"
               startIcon={<DeleteIcon />}
+              style={{ margin: 5 }}
             >
-              Delete
+              Return
+            </Button>
+            <Button
+              color="primary"
+              variant="contained"
+              startIcon={<DeleteIcon />}
+              style={{ margin: 5 }}
+            >
+              update
             </Button>
           </td>
         </tr>
         <tr>
           <td>001</td>
-          <td>
-            <img
-              height={80}
-              width={80}
-              className="profile"
-              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-          </td>
           <td>Jack</td>
-          <td>jack@100</td>
+          <td>Harry Potter</td>
+          <td>JK Rowling</td>
+          <td>5</td>
+          <td>3837443344</td>
+          <td>Thrissur</td>
+          <td>12/04/2023</td>
+          <td>21/04/2023</td>
           <td align="center">
             <Button
-              color="error"
+              color="info"
               variant="contained"
               startIcon={<DeleteIcon />}
+              style={{ margin: 5 }}
             >
-              Delete
+              Return
+            </Button>
+            <Button
+              color="primary"
+              variant="contained"
+              startIcon={<DeleteIcon />}
+              style={{ margin: 5 }}
+            >
+              update
             </Button>
           </td>
         </tr>
@@ -489,208 +525,6 @@ function Users() {
   );
 }
 
-function Librarian() {
-  return (
-    <>
-      <input type="text" className="search" name="" id="" />
-      {/* Mobile Design */}
-      <div className="card-container">
-        <div className="card-item">
-          <div className="card-header">
-            <img
-              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="profile"
-              alt=""
-            />
-            <DeleteIcon className="btn" fontSize="medium" />
-          </div>
-          <div className="card-body">
-            <tr>
-              <th>Id: </th>
-              <td>001</td>
-            </tr>
-            <tr>
-              <th>Name: </th>
-              <td>Jack</td>
-            </tr>
-            <tr>
-              <th>Email: </th>
-              <td>jack@20</td>
-            </tr>
-          </div>
-        </div>
-        <div className="card-item">
-          <div className="card-header">
-            <img
-              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="profile"
-              alt=""
-            />
-            <DeleteIcon className="btn" fontSize="medium" />
-          </div>
-          <div className="card-body">
-            <tr>
-              <th>Id: </th>
-              <td>001</td>
-            </tr>
-            <tr>
-              <th>Name: </th>
-              <td>Jack</td>
-            </tr>
-            <tr>
-              <th>Email: </th>
-              <td>jack@20</td>
-            </tr>
-          </div>
-        </div>
-        <div className="card-item">
-          <div className="card-header">
-            <img
-              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="profile"
-              alt=""
-            />
-            <DeleteIcon className="btn" fontSize="medium" />
-          </div>
-          <div className="card-body">
-            <tr>
-              <th>Id: </th>
-              <td>001</td>
-            </tr>
-            <tr>
-              <th>Name: </th>
-              <td>Jack</td>
-            </tr>
-            <tr>
-              <th>Email: </th>
-              <td>jack@20</td>
-            </tr>
-          </div>
-        </div>
-
-        <div className="card-item">
-          <div className="card-header">
-            <img
-              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="profile"
-              alt=""
-            />
-            <DeleteIcon className="btn" fontSize="medium" />
-          </div>
-          <div className="card-body">
-            <tr>
-              <th>Id: </th>
-              <td>001</td>
-            </tr>
-            <tr>
-              <th>Name: </th>
-              <td>Jack</td>
-            </tr>
-            <tr>
-              <th>Email: </th>
-              <td>jack@20</td>
-            </tr>
-          </div>
-        </div>
-      </div>
-      {/* Desktop, laptop , tablet design */}
-      <motion.table
-        initial={{
-          x: 200,
-          opacity: 0,
-        }}
-        animate={{
-          x: 0,
-          opacity: 1,
-        }}
-        transition={{
-          delay: 0.5,
-          duration: 1,
-          type: "tween",
-        }}
-        border={1}
-        cellPadding={3}
-      >
-        <tr>
-          <th>ID</th>
-          <th>Profile</th>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Remove</th>
-        </tr>
-        <tr>
-          <td>001</td>
-          <td>
-            <img
-              height={80}
-              width={80}
-              className="profile"
-              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-          </td>
-          <td>Jack</td>
-          <td>jack@100</td>
-          <td align="center">
-            <Button
-              color="error"
-              variant="contained"
-              startIcon={<DeleteIcon />}
-            >
-              Delete
-            </Button>
-          </td>
-        </tr>
-        <tr>
-          <td>001</td>
-          <td>
-            <img
-              height={80}
-              width={80}
-              className="profile"
-              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-          </td>
-          <td>Jack</td>
-          <td>jack@100</td>
-          <td align="center">
-            <Button
-              color="error"
-              variant="contained"
-              startIcon={<DeleteIcon />}
-            >
-              Delete
-            </Button>
-          </td>
-        </tr>
-        <tr>
-          <td>001</td>
-          <td>
-            <img
-              height={80}
-              width={80}
-              className="profile"
-              src="https://images.pexels.com/photos/2007647/pexels-photo-2007647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              alt=""
-            />
-          </td>
-          <td>Jack</td>
-          <td>jack@100</td>
-          <td align="center">
-            <Button
-              color="error"
-              variant="contained"
-              startIcon={<DeleteIcon />}
-            >
-              Delete
-            </Button>
-          </td>
-        </tr>
-      </motion.table>
-    </>
-  );
-}
 function Books() {
   return (
     <>
@@ -1104,4 +938,4 @@ function Category() {
   );
 }
 
-export default AdminDashboard;
+export default LibrarianDashboard;
