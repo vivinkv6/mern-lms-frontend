@@ -14,6 +14,8 @@ import icon3 from "/icon3.png";
 import icon4 from "/icon4.png";
 import icon5 from "/icon5.png";
 
+import './sidenav.css';
+
 type sideNavProp = {
   setNav: React.Dispatch<React.SetStateAction<number>>;
 };

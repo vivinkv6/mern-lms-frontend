@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&display=swap");
+
+/* Side Nav Section */
+.sidenav2 {
+  display: none;
+}
+.sidenav {
+  width: 300px;
+  background-color: rgb(92, 169, 246);
+  padding: 10px;
+  height: 100dvh;
+  position: fixed;
+}
+
+.sidenav > span {
+  font-size: 40px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  text-transform: uppercase;
+  color: azure;
+  text-shadow: 2px 1px 4px black;
+}
+
+.sidenav > ul {
+  margin-top: 30px;
+  height: 300px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+li {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  width: 70%;
+  font-size: 25px;
+  color: rgb(228, 228, 228);
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .sidenav {
+    width: 200px;
+    background-color: rgb(92, 169, 246);
+    padding: 10px;
+    height: 100dvh;
+    position: fixed;
+  }
+
+  .sidenav > span {
+    font-size: 25px;
+    color: azure;
+    text-shadow: 2px 1px 4px black;
+  }
+
+  .sidenav > ul {
+    margin-top: 30px;
+    height: 400px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  li {
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    width: 70%;
+    font-size: 20px;
+    color: rgb(228, 228, 228);
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sidenav {
+    display: none;
+  }
+
+  .sidenav2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 45px;
+    background-color: rgb(92, 169, 246);
+    padding: 15px;
+    height: 100dvh;
+    position: fixed;
+  }
+
+  .sidenav2 > ul {
+    margin-top: 80px;
+    height: 800px;
+    list-style-type: none;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .sidenav {
+    display: none;
+  }
+
+  .sidenav2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 45px;
+    background-color: rgb(92, 169, 246);
+    padding: 15px;
+    height: 100dvh;
+    position: fixed;
+  }
+
+  .sidenav2 > ul {
+    margin-top: 80px;
+    height: 800px;
+    list-style-type: none;
+  }
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+  }
+}
+
+/* Admin Dashboard part */
+
+table {
+  margin-top: 5rem;
+  width: 800px;
+}
+
+table,
+tr,
+th,
+td {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+td,
+th {
+  font-size: 20px;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+/* Users Section */
+
+.search {
+  border: 0.5px solid black;
+  margin-left: 30px;
+  margin-top: 20px;
+  height: 30px;
+  width: 500px;
+  border-radius: 7px;
+  font-size: 25px;
+  background-color: rgb(237, 237, 237);
+}
+
+.card-container {
+  margin-top: 20px;
+  margin-right: 10px;
+  height: auto;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-item {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 20px 50px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.card-item {
+  position: relative;
+  z-index: -100;
+  box-shadow: 2px 1px 7px black;
+}
+
+.card-header > .btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  border: 0.5px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(238, 238, 238);
+}
+
+.profile {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 0.5px solid rgb(0, 0, 0);
+}
+
+tr {
+  text-align: left;
+  margin: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  table {
+    width: 500px;
+  }
+
+  .search {
+    width: 400px;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  table {
+    display: none;
+  }
+  .card-container {
+    display: flex;
+  }
+  .search {
+    width: 220px;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .search {
+    width: 190px;
+    margin-left: 0px;
+  }
+  .card-container {
+    margin-top: 20px;
+    margin-right: 35px;
+  }
+
+  .card-item {
+    width: 120px;
+  }
+  .profile {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 0.5px solid rgb(0, 0, 0);
+  }
+
+  tr {
+    text-align: left;
+    padding: 20px;
+  }
+}
